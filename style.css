@@ -1,0 +1,107 @@
+body {
+  background-color: rgb(1, 1, 1);
+  font-family: "Nunito", sans-serif;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+}
+
+div {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.personalizeButton {
+  justify-content: center;
+  display: flex;
+}
+
+.text-container {
+  font-size: 40px;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 4%;
+}
+
+.personalizeButton button {
+  font-family: "Nunito", sans-serif;
+  border: none;
+  border-radius: 30px;
+  box-sizing: border-box;
+  height: 70px;
+  width: 200px;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  cursor: pointer;
+  transition: background-color, 250ms ease-in;
+}
+
+.personalizeButton button:hover {
+  box-shadow: 0 5px 15px rgba(31, 31, 31);
+}
+
+.secondarytext {
+  justify-content: center;
+}
+
+.secondarytext p {
+  font-size: 60%;
+  margin-bottom: 30px;
+}
+
+.mainImage {
+  margin-top: 50px;
+}
+
+.mainImage img {
+  width: 876px;
+  height: 876px;
+}
+
+
+/* Media query per dispositivi con larghezza massima di 600px */
+@media (max-width: 900px) {
+  body {
+    min-height: 100vh;
+    min-width: 100%;
+    justify-content: center;
+  }
+  
+  .container {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column; /* Inverte l'ordine dei divisori */
+    justify-content: center;
+  }
+
+  .text-container {
+    text-align: center;
+    align-items: center;
+    font-size: 80%;
+    width: 100%;
+  }
+  
+  .secondarytext p {
+    font-size: 120%;
+  }
+
+  .personalizeButton button {
+    height: 50px;
+  }
+  
+  .mainImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mainImage img {
+    height: 100%;
+    min-width: 30vh;
+  }
+}
