@@ -28,6 +28,10 @@ div {
   margin-right: 4%;
 }
 
+.mainText {
+  justify-content: center;
+}
+
 .personalizeButton button {
   font-family: "Nunito", sans-serif;
   border: none;
@@ -38,7 +42,7 @@ div {
   background-color: rgb(31, 31, 31);
   color: white;
   cursor: pointer;
-  transition: background-color, 250ms ease-in;
+  transition: background-color, 100ms ease-in;
 }
 
 .personalizeButton button:hover {
