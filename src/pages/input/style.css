@@ -22,7 +22,7 @@ div {
 }
 
 .input-container {
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
@@ -30,15 +30,58 @@ div {
 
 .input-container input {
   margin-bottom: 20px;
+  margin-right: 30px;
   border: none;
-  border-radius: 50px;
-  box-shadow: 3px 3px 5px #555555;
+  border-radius: 0px;
   height: 50px;
-  width: 300px;
-  text-align: center;
-  font-size: 20px;
+  color: white;
+  box-shadow: 0px 0px 15px rgb(63, 63, 63);
+  border: solid 2px rgb(63, 63, 63);
+  width: 110%;
+  padding-left: 10px;
+  text-align: start;
+  font-size:15px;
   font-family: "Nunito", sans-serif;
-  background-color: rgb(56, 56, 56);
+  background-color: rgb(36, 36, 36);
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+.input-container input::selection {
+  background-color: rgba(255, 255, 255, 0.363);
+}
+
+/* Cambia il colore del caret in Firefox */
+.input-container input::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.363);
+}
+
+.text-container {
+  font-size: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 4%;
+}
+
+.secondText {
+  font-size: 70%;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.canvas {
+  margin-left: 300px;
+  object-fit: fill;
+  flex-direction: column;
+}
+
+.canvas canvas {
+  height: 400px;
+  width: 1100px;
 }
 
 .button {
@@ -59,7 +102,8 @@ div {
 .button button {
   font-family: "Nunito", sans-serif;
   border: none;
-  border-radius: 30px;
+  border-radius: 50px;
+  box-shadow: 0 0px 30px rgb(56, 56, 56);
   box-sizing: border-box;
   height: 70px;
   width: 200px;
@@ -70,7 +114,12 @@ div {
 }
 
 .button button:hover { 
-  box-shadow: 0 5px 15px rgba(31, 31, 31);
+  box-shadow: 0 5px 8px rgba(31, 31, 31);
+}
+
+.button button:active {
+  background-color: rgb(58, 58, 58);
+  outline: none;
 }
 
 .secondarytext {
@@ -99,6 +148,32 @@ div {
     min-width: 100%;
     justify-content: center;
   }
+
+  .canvas {
+    margin-left: 0px;
+  }
+
+  .canvas canvas {
+    height: 105px;
+    width: 300px;
+  }
+
+  .text-container {
+    text-align: center;
+    align-items: center;
+    font-size: 80%;
+    width: 100%;
+  }
+
+  .input-container {
+    flex-direction: column;
+    margin-left: 30px;
+  }
+
+  .input-container input {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
   
   .container {
     margin-top: 10%;
@@ -113,12 +188,8 @@ div {
     font-size: 80%;
     width: 100%;
   }
-  
-  .secondarytext p {
-    font-size: 120%;
-  }
 
-  .personalizeButton button {
+  .button button {
     height: 50px;
   }
   

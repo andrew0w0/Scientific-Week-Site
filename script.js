@@ -23,6 +23,8 @@ const analytics = getAnalytics(app);
 
 const button = document.getElementById("generate-button")
 
+console.log(button)
+
 button.addEventListener("click", (MouseEvent) => {
   window.location.href = "./src/pages/input/input.html"
 })
